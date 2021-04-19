@@ -751,7 +751,7 @@ main#contact-container {
   display: grid;
   -ms-grid-column: 1;
   grid-column: 1fr;
-      grid-template-areas: "form-container" "social-container";
+      grid-template-areas: "form-container" "social-container";
   color: #fff;
 }
 
@@ -879,6 +879,7 @@ main#contact-container .contact-modal-msg .closeModal {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   cursor: pointer;
+  pointer-events: all;
 }
 
 /* ================== MEDIA QUERIES ==================*/
