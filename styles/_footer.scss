@@ -1,0 +1,30 @@
+@import './variables';
+
+footer{
+    .copyright{
+        padding: $padding;
+        color: $main-text;
+        border-top: 1px solid $main-text;
+        border-bottom: 1px solid $main-text;
+        margin-bottom: 1rem;
+    }
+    .social{
+        justify-content: flex-end;
+        padding: $padding;
+        color: $main-text;
+        border-top: 1px solid $main-text;
+        border-bottom: 1px solid $main-text;
+        display: flex;
+        align-items: center;
+
+        ul{
+            padding: 0 1em;
+            list-style: none;
+            li{
+                display: inline;
+                padding: 0 .5em;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

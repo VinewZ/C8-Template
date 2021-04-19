@@ -1,0 +1,125 @@
+@import './variables';
+
+section.about-container{
+    display: grid;
+    grid-template-columns: 70px 1fr 1fr;
+    grid-template-rows: max-content;
+    grid-template-areas: 
+        "section-name section-name section-name" 
+        "number about-desc ." 
+        "overflow-container overflow-container ."
+        "about-us-btn . .";
+
+    padding: $padding;
+    color: $main-text;
+    overflow: hidden;
+    position: relative;
+        .about-desc{
+        grid-area: about-desc;
+        margin-top: 10px;
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 1.3;
+        width: 90%;
+    }
+    .overflow-container{
+        grid-area: overflow-container;
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content;
+        grid-template-areas: 
+            "overflow-text"
+            "overflow-title"
+            "overflow-text2"
+            "overflow-text3";
+        display: grid;
+        justify-content: center;
+        font-size: 8vw;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1;
+        .overflow-title{
+            grid-area: overflow-title;
+            font-weight: 500;
+            margin-left: 40px;
+            letter-spacing: -7px;
+            font-size: 14vw;
+        }
+        .overflow-text{
+            transform-origin: 50% 50%;
+            transform: translate(-40px, 0px);
+            color: $bg-gray;
+            span{
+                color: white;
+                text-shadow: none;
+            }
+        }
+        .overflow-text:nth-child(1){
+            grid-area: overflow-text;
+        }
+        .overflow-text:nth-child(2){
+            grid-area: overflow-text2;
+        }
+        .overflow-text:nth-child(3){
+            grid-area: overflow-text3;
+        }
+    }
+    .about-us-btn{
+        grid-area: about-us-btn;
+        text-decoration: none;
+        color: $main-text;
+        text-align: center;
+        margin: 80px ;
+        white-space: nowrap;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+}
+
+
+
+/* ========== MEDIA QUERIES ========== */
+
+@media screen and (min-width: 769px) {
+    section.about-container{
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: max-content;
+        grid-template-areas: 
+            "section-name section-name ." 
+            "number about-desc ." 
+            "about-us-btn overflow-container overflow-container";
+        .about-desc{
+            font-size: 3rem;
+            margin-bottom: 4rem;
+        }
+        .about-us-btn{
+            position: absolute;
+            left: 65%;
+            top: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;  
+            mix-blend-mode: difference;
+            width: 10%;
+            height: 10%;
+            transition: all .3s ease;
+            border-bottom: 0px solid $red;
+            
+            .border{
+                border: 5px solid $gray-details;
+                padding: 100px 95px;
+                border-radius: 50%;
+                transition: all .5s ease;
+            }
+            &:hover{
+                border-bottom: 9px solid $red;
+                .border{
+                    padding: 80px 75px;
+                    border: 5px solid #fff;
+                }
+            }
+        }
+    }
+}
+
+/* ========== MEDIA QUERIES ========== */

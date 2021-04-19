@@ -1,0 +1,84 @@
+@import './variables';
+
+section.work-container{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    color: $main-text;
+    position: relative;
+    .mobile-flex-row{
+        display: flex;
+        flex-direction: row;
+        .number{
+            margin-right: 10px;
+        }
+        .work-desc{
+            font-size: 1.5rem;
+        }
+    }
+    .work-img{
+        align-self: start;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    .work-title{
+        font-size: 3rem;
+    }
+    .work-subtitle{
+        width: 65%;
+        font-weight: 100;
+        letter-spacing: 1px;
+    }
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+@media screen and (min-width: 769px) {
+    section.work-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: max-content;
+        grid-template-areas: 
+            ". section-name section-name"
+            ". mobile-flex-row mobile-flex-row"
+            "work1 work2 .";
+
+        .work-img{
+            transition: all 0.2s ease;
+            clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
+            &:hover{
+                clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 92% 7%, 100% 15%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 8% 93%, 0% 85%);
+                transform: scale(1.05);
+            }
+        }
+        .work-desc{
+            grid-area: work-desc;
+        }
+        .work-left{
+            grid-area: work1;
+        }
+        .work-right{
+            grid-area: work2;
+            .work-img{
+                max-width: 150%;
+            }
+        }
+        .mobile-flex-row{
+            grid-area: mobile-flex-row;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: max-content;
+            grid-template-areas: 
+            "work-desc number";
+            
+            .work-desc{
+                grid-area: work-desc;
+            }
+            .number{
+                text-align: right;
+            }
+        }
+    }
+}
+
+    /* ========== MEDIA QUERIES ========== */

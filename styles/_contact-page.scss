@@ -1,0 +1,125 @@
+@import './variables';
+
+main#contact-container{
+   padding: $padding;
+   display: grid;
+   grid-column: 1fr;
+   grid-template-areas: 
+        "form-container"
+        "social-container";
+    color: $main-text;
+    .form-container{
+        grid-area: form-container;
+        display: flex;
+        flex-direction: column;
+        #openModal{
+            cursor: pointer;
+        }
+        label{
+            display: flex;
+            flex-direction: column;
+            padding: .6em 0;
+        }
+
+        input, textarea{
+            border: none;
+            border-bottom: 2px solid $red;
+            border-radius: 5px;
+            background-color: $gray-details;
+            padding: .3em 0;
+            color: $main-text;
+            &:focus{
+                outline: none;
+                border: 2px solid $red;
+            }
+        }
+        button{
+            align-self: flex-start;
+            padding: $btn-padding;
+            margin: $btn-margin;
+            border-radius: 5px;
+            border: none;
+            background-color: $red;
+            color: $main-text;
+        }
+    }
+    .social-container{
+        grid-area: social-container;
+        text-align: center;
+        margin: 3em 0;
+        .social-icon{
+            grid-area: icons;
+            font-size: 4rem;
+            padding: .2em;
+        }
+    }
+    .contact-modal-msg{
+        opacity: 0;
+        pointer-events: none;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.6);
+        z-index: 97;
+        transition: all 0.3s ease;
+        .successful, .failed, .loadingScreen{
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 2rem;
+            background-color: $bg-gray;
+            width: 85vw;
+            display: grid;
+            place-items: center;
+            border-radius: 10px;
+            padding: 10px;
+            pointer-events: none;
+            z-index: 98;
+        }
+        .successful .fa-thumbs-up, .failed .fa-times{
+            font-size: 10rem;
+            padding: 10px 0;
+        }
+        .closeModal{
+            position: fixed;
+            display: grid;
+            place-items: center;
+            right: 10%;
+            top: 50%;
+            z-index: 99;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 700;
+            background-color: $red;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+    }
+}
+    
+/* ================== MEDIA QUERIES ==================*/
+@media screen and (min-width: 769px){
+    main#contact-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "form-container social-container";
+
+        .social-icon{
+            transition: all 0.2s ease;
+        }
+        .social-icon:hover{
+            transform: scale(1.1);
+            color: $red;
+        }
+    }
+}
+
+/* ================== MEDIA QUERIES ==================*/

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinicios, with an O</title>
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/logo-fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo-fav//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/logo-fav//favicon-16x16.png">
+    <link rel="manifest" href="./assets/logo-fav//site.webmanifest">
+    <link rel="mask-icon" href="./assets/logo-fav//safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- FAVICONS -->
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <!-- FONTS -->
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- FONT AWESOME -->
+
+</head>
+<body>
+
+    <div class="page-transition is-active">
+        <h2 class="loading-screen logo">VO</h2>
+    </div>
+
+    <header class="hero">
+        <img class="parallax" src="./assets/img/contact-page-header.jpg" alt="">
+        <img class="parallax noise" src="./assets/img/noise.png" alt="">
+        <nav>
+            <a class="logo fade-on-click" href="./index.html">VO</a>
+            <ul class="navbar">
+                <li><a class="fade-on-click" href="./contact.html">CONTATO</a></li>
+                <li><a class="fade-on-click" href="">SOBRE</a></li>
+                <li><a class="fade-on-click" href="./projects.html">PROJETOS</a></li>
+            </ul>
+        </nav>
+        <div class="header-wrap">
+            <h3 class="first-line">GET IN</h3>
+            <h2 class="second-line red">TOUCH</h2>
+            <div class="who">
+                <p>Entre em contato para saber como podemos colaborar e atingir um objetivo maior!</p>
+            </div>
+        </div>
+    </header>
+    <main id="contact-container">
+        <form class="form-container">
+            <label for="name">Nome:
+                <input type="text" id="name" name="name">
+            </label>
+            
+            <label for="subject">Assunto:
+                <input type="text" id="subject" name="subject">
+            </label>
+            
+            <label for="email">Email:
+                <input type="text" id="email" name="email">
+            </label>
+            
+            <label for="msg">Mensagem:
+                <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+            </label>
+            <button type="button" id="openModal" onclick="sendmail()">ENVIAR</button>
+        </form>
+        <div class="social-container">
+            <h2>Pode me encontrar aqui também!</h2>
+            <a href="https://github.com/VinewZ" target="_blank"><i class="social-icon fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/vinicios-alves/" target="_blank"><i class="social-icon fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/vinewalves/" target="_blank"><i class="social-icon fab fa-instagram"></i></a>
+            <h5>Fique a vontade para mandar uma mensagem =)</h5>
+        </div>
+        <div class="contact-modal-msg">
+            <div class="loadingScreen">
+                <p>Enviando sua mensagem...</p>
+            </div>
+            <div class="closeModal">
+                <p>X</p>
+            </div>
+            <div class="successful">
+                <h3>Sua mensagem foi enviada com sucesso!</h3>
+                <i class="far fa-thumbs-up"></i>
+                <p>Obrigado! Responderei o mais breve possível.</p>
+            </div>
+            <div class="failed">
+                <h3>Sua mensagem não foi enviada</h3>
+                <i class="fas fa-times"></i>
+                <p>Verifique os dados e tente novamente por favor!</p>
+            </div>
+        </div>
+    </main>
+
+    
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2021 VINICIOS SILVA</p>
+        </div>
+        <div class="social">
+            <p>REDES:
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/vinicios-alves/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://github.com/VinewZ" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.instagram.com/vinewalves/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </p>
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/transitions.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/sendmail.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_DwxQPq4vpY16k8Wnt5iFL");
+    })();
+    </script>
+    <script src="sendmail.js"></script>
+</body>
+</html>

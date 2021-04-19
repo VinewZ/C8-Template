@@ -1,0 +1,68 @@
+@import './variables';
+
+section.clients{
+    padding: $padding;
+    .client-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .client-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        background-color: #313234;
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        transform-origin: 50% 50%;
+        transition: transform 0.9s ease;
+        .client-logo{
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    section.clients{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            ". section-name section-name"
+            "client-wrapper client-wrapper client-wrapper";
+
+        .client-wrapper{
+            grid-area: client-wrapper;
+            padding: 5rem 0;
+            max-width: 80%;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .client-item:nth-of-type(1){
+            width: 13em;
+            height: 13em;
+        }
+        .client-item:nth-of-type(2){
+            width: 15em;
+            height: 15em;
+        }
+        .client-item:nth-of-type(3){
+            width: 19em;
+            height: 19em;
+        }
+        .client-item:nth-of-type(4){
+            width: 13em;
+            height: 13em;
+        }
+        .client-item:nth-of-type(5){
+            width: 14.4em;
+            height: 14.4em;
+        }
+        .client-item:nth-of-type(6){
+            width: 12em;
+            height: 12em;
+        }
+    }
+}

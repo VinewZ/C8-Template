@@ -1,0 +1,142 @@
+@import './variables';
+@import './header';
+@import './about';
+@import './work';
+@import './clients';
+@import './contact';
+@import './footer';
+@import './transition';
+@import './contact-page';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, section{ background-color: $bg-gray; scroll-behavior: smooth;}
+
+h1,h2,h3,h4,h5,h6,p,div,a,li, form{ font-family: 'Oswald', sans-serif;}
+
+body{ position: relative;}
+
+a{text-decoration: none; color: white;}
+
+.line-through{ 
+    text-transform: lowercase; 
+    letter-spacing: 2px;
+    text-decoration: line-through;
+}
+
+.number{
+    grid-area: number;
+    font-size: 4rem;
+    color: $gray-details;
+}
+.section-name{
+    grid-area: section-name;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+    color: $main-text;
+    transition: border-bottom 1s ease;
+}
+
+.rotate-icon{
+    position: relative;
+    color: $red;
+    left: 30%;
+    top: 40%;
+    font-size: 2em;
+    transition: all .2s ease;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #333;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $red;
+    border-radius: 10px;
+  }
+
+/* ================== ANIMATIONS ==================*/
+
+@keyframes invertEffectOnImgs{
+    from{
+        filter: invert(1);
+    }
+    to{
+        filter: invert(0);
+    }
+}
+/* ================== ANIMATIONS ==================*/
+
+
+
+/* ================== UTILITIES ==================*/
+.red{
+    color: $red !important;
+}
+
+.outline{
+    text-shadow: -1px -1px 0 $main-text,
+                1px -1px 0 $main-text, 
+                -1px 1px 0 $main-text, 
+                1px 1px 0 $main-text;
+}
+
+.bordered-centered-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 20%;
+    padding: 2%;
+    border: 2px solid $main-text;
+    border-radius: 50%;
+    font-weight: 400;
+}
+/* ================== UTILITIES ==================*/
+
+
+
+/* ================== ICON CUSTOMIZATION ==================*/
+.fa-down-arrow{
+    border: 3px solid #fff;
+    border-radius: 50%;
+    font-size: 3vw;
+    width: 99px;
+    height: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .fa-arrow-up{
+        transform: rotate(180deg);
+    }
+}
+.fa-right-arrow{
+    color: $bg-gray;
+    font-size: 8vw;
+    padding-right: .5em;
+    transform: rotate(90deg);
+}
+/* ================== ICON CUSTOMIZATION ==================*/
+
+
+/* ================== MEDIA QUERIES ==================*/
+
+@media screen and (min-width: 769px){
+    .number {
+        font-size: 10rem;
+        line-height: .9;
+    }
+}
+
+/* ================== MEDIA QUERIES ==================*/
