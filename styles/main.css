@@ -30,7 +30,7 @@ header.hero .noise {
   left: -50%;
   width: 200vw;
   height: 200vh;
-  opacity: 0.5;
+  opacity: 0.2;
   -webkit-animation: noise steps(6) 0.5s infinite;
           animation: noise steps(6) 0.5s infinite;
   overflow: hidden;
