@@ -24,20 +24,6 @@ header.hero .parallax {
   overflow: hidden;
 }
 
-header.hero .noise {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200vw;
-  height: 200vh;
-  opacity: 0.2;
-  -webkit-animation: noise steps(6) 0.5s infinite;
-          animation: noise steps(6) 0.5s infinite;
-  overflow: hidden;
-  z-index: 1;
-  pointer-events: none;
-}
-
 header.hero nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,61 +146,6 @@ header.hero .third-line .clip-path-text {
           transform: translate(0px, -200px);
 }
 
-/* ========== ANIMATIONS ========== */
-@-webkit-keyframes noise {
-  0%, 100% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-  10% {
-    -webkit-transform: translate(-5%, -10%);
-            transform: translate(-5%, -10%);
-  }
-  30% {
-    -webkit-transform: translate(3%, -15%);
-            transform: translate(3%, -15%);
-  }
-  50% {
-    -webkit-transform: translate(12%, 9%);
-            transform: translate(12%, 9%);
-  }
-  70% {
-    -webkit-transform: translate(9%, 4%);
-            transform: translate(9%, 4%);
-  }
-  90% {
-    -webkit-transform: translate(-1%, 7%);
-            transform: translate(-1%, 7%);
-  }
-}
-@keyframes noise {
-  0%, 100% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-  10% {
-    -webkit-transform: translate(-5%, -10%);
-            transform: translate(-5%, -10%);
-  }
-  30% {
-    -webkit-transform: translate(3%, -15%);
-            transform: translate(3%, -15%);
-  }
-  50% {
-    -webkit-transform: translate(12%, 9%);
-            transform: translate(12%, 9%);
-  }
-  70% {
-    -webkit-transform: translate(9%, 4%);
-            transform: translate(9%, 4%);
-  }
-  90% {
-    -webkit-transform: translate(-1%, 7%);
-            transform: translate(-1%, 7%);
-  }
-}
-
-/* ========== ANIMATIONS ========== */
 /* ========== MEDIA QUERIES ========== */
 @media screen and (min-width: 769px) {
   header.hero .header-wrap {
